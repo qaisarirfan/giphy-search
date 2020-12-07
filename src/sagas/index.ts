@@ -28,6 +28,7 @@ function* fetchNews(action: Get) {
     ).then((response) => response.json())
     const currentPage = get(json, "pagination.offset", 0)
 
+    // redux state normalization
     const entities = Object.values(json.data).reduce((obj: any, row: any) => {
       obj.ids = [...(obj.ids || []), row.id]
       set(obj, `data[${row.id}]`, {
