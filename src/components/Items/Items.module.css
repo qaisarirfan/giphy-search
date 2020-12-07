@@ -1,0 +1,145 @@
+.masonry{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.masonryBrick {
+    width: calc(100% / 6);
+    height: 170px;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.masonryBrick span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+}
+
+.popup{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    width: 90%;
+    height: 90%;
+    z-index: 2;
+}
+.popup .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    border: none;
+    padding: 5px 11px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.popup img{
+    max-width: 100%;
+}
+
+.popup .content{
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    flex-direction: column;
+}
+.layer{
+    position: fixed;
+    background: #040404b5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    .masonryBrick {
+        width: calc(100% / 6);
+    }    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    .masonryBrick {
+        width: calc(100% / 4);
+    }
+
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+    .masonryBrick {
+        width: calc(100% / 5);
+    }    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    .masonryBrick {
+        width: calc(100% / 3);
+    }
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    .masonryBrick {
+        width: calc(100% / 2);
+    }    
+  }
